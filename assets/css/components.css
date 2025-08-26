@@ -1,0 +1,68 @@
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  border-left: 2px solid var(--border);
+  margin: 1rem 0 0 1rem;
+}
+
+.tl-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid #27131a;
+  margin-left: -6px;
+}
+
+.tl-content {
+  margin: 0.4rem 0 1.2rem 1rem
+}
+
+
+.list {
+  padding-left: 1.1rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+.chips li {
+  background: #151c2c;
+  border: 1px solid var(--border);
+  color: #ffdfe4;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* formulaires */
+.form label {
+  display: block;
+  font-weight: 600;
+  margin: 0.6rem 0 0.25rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  background: #0c1222;
+  color: #e6e8ee;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  outline: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(255 59 92 / 0.25);
+}

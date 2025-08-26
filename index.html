@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Tristan Valcke</title>
+  <meta name="description" content="Portfolio de Tristan Valcke — étudiant en informatique passionné par le web (EPHEC LLN). Projets, compétences, formation et contact." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+
+  <!-- to do : ajouter favicon -->
+
+</head>
+<body>
+<!-- Header avec navigation sticky -->
+<header class="site-header">
+  <a class="brand" href="#hero" aria-label="Aller à l'accueil">Tristan<span class="accent">.</span></a>
+  <!-- Burger menu pour mobile (à tester sur tel) -->
+  <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Ouvrir le menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+
+
+  <nav id="primary-nav" class="site-nav">
+    <a href="#apropos">À propos</a>
+    <a href="#projets">Projets</a>
+    <a href="#formation">Formation</a>
+    <a href="#competences">Compétences</a>
+    <a href="pages/about/cv.html">CV</a>
+    <a href="pages/heures/heures.html">Heures</a>
+    <a class="btn" href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<main id="hero" class="hero">
+  <div class="hero-inner">
+    <h1 class="reveal">Tristan Valcke</h1>
+    <p class="tagline reveal delay-1">Étudiant en informatique <strong>passionné par le web</strong>.</p>
+    <!-- CTA buttons -->
+    <div class="hero-ctas reveal delay-2">
+      <a class="btn" href="#projets">Voir mes projets</a>
+      <a class="btn ghost" href="pages/about/cv.html">Mon CV</a>
+    </div>
+    <!-- avec emojis -->
+    <div class="hero-meta reveal delay-3">
+      <span>🎓 EPHEC LLN — IT (Bac 3)</span>
+      <span>📍 Belgique</span>
+      <span>💻 💡 Dev web & électronique</span>
+    </div>
+  </div>
+
+  <figure class="hero-visual parallax" aria-hidden="true"> <!--to do : trouver une vraie image -->
+    <img src="../assets/images/zarla.jpg" alt="Zarla" />
+    <p>Voici une photo de mon chat en attendant de trouver une image adéquate ;)</p>
+  </figure>
+</main>
+
+<!-- Section à propos -->
+<section id="apropos" class="section">
+  <div class="container two-col">
+    <div class="reveal">
+      <h2>À propos</h2>
+      <p>
+
+        Curieux, patient et soucieux du détail, j’aime construire des interfaces propres et efficaces. 
+        J’apprends vite, je documente ce que je fais, et je garde le focus sur l’utilisateur.
+        je cherche toujours à livrer un résultat propre,
+        accessible et maintenable.
+      </p>
+      <p>
+        Mon terrain de jeu : HTML/CSS/JS et Python, ergonomie & performances
+      </p>
+    </div>
+    <!-- Sidebar avec ce que je recherche, à droite du à propos -->
+    <aside class="card reveal delay-1">
+      <h3>Ce que je recherche</h3>
+      <p>Des projets concrets pour progresser vite, livrer propre, et soigner l’expérience.</p>
+      <ul class="list">
+        <li>🔧 Intégration web moderne</li>
+        <li>🧭 UX simple et claire</li>
+        <li>🚀 Petites optimisations utiles</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- Section projets -->
+<section id="projets" class="section alt">
+  <div class="container">
+    <h2 class="reveal">Projets - section pas encore complétée</h2>
+
+    <div class="grid cards">
+      <article class="card project reveal">
+        <!-- Photo au pif avant de mettre les vrais projets -->
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=60&auto=format&fit=crop&w=900" alt="Aperçu projet 1">
+        <div class="card-body">
+          <h3>Projet A — Lorem</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra sed tellus hendrerit placerat</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a class="btn small" href="pages/projects/projet-1.html">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="card project reveal delay-1">
+        <!-- Photo au pif avant de mettre les vrais projets -->
+        <img src="https://images.unsplash.com/photo-1520975922299-6cbdfd0a972d?q=60&auto=format&fit=crop&w=900" alt="Aperçu projet 2">
+        <div class="card-body">
+          <h3>Projet B — Ipsum</h3>
+          <p>Nunc auctor gravida elementum. Sed in orci quis lorem interdum convallis</p>
+          <div class="tags"><span>Responsive</span><span>Accessibilité</span></div>
+          <a class="btn small" href="pages/projects/projet-2.html">Voir le projet</a>
+        </div>
+      </article>
+
+      <article class="card project reveal delay-2">
+        <!-- Photo au pif avant de mettre les vrais projets -->
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=60&auto=format&fit=crop&w=900" alt="Aperçu projet 3">
+        <div class="card-body">
+          <h3>TFE — Logiciel de facturation (en cours)</h3>
+          <p>Python + PySide6 pour David Limousine (LVC), PDF, email, base SQLite, interface MacOS.</p>
+          <div class="tags"><span>Python</span><span>PySide6</span><span>SQLite</span></div>
+          <a class="btn small" href="pages/projects/projet-3.html">Voir le projet</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Section formation/études -->
+<section id="formation" class="section alt">
+  <div class="container">
+    <h2 class="reveal">Formation</h2>
+    <ol class="timeline reveal delay-1">
+      <li>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>EPHEC LLN — IT (Bac 3)</h3>
+          <p>Parcours en informatique : dev, systèmes, gestion de projet. Cours préférés : dev web, électricité & électronique.</p>
+        </div>
+      </li>
+      <li>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <h3>Diplôme secondaire — Collège Sainte-Gertrude (Nivelles)</h3>
+          <p>Obtention du CESS.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Section compétences -->
+<section id="competences" class="section alt">
+  <div class="container">
+    <h2 class="reveal">Compétences</h2>
+    <ul class="chips reveal delay-1">
+      <li>HTML</li>
+      <li>CSS (responsive)</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>C (bases)</li>
+    </ul>
+
+    <h3 class="reveal" style="margin-top:1.2rem;">Systèmes & outils</h3>
+    <ul class="chips reveal delay-1">
+      <li>Linux</li><li>Docker</li><li>Git/GitHub</li>
+      <li>Microsoft 365</li>
+    </ul>
+
+    <h3 class="reveal" style="margin-top:1.2rem;">Soft skills</h3>
+    <ul class="chips reveal delay-1">
+      <li>Travail en groupe</li>
+      <li>Autonomie</li>
+      <li>Soucieux du détail</li>
+      <li>Patient</li>
+      <li>orienté client</li>
+      <li>Aime apprendre</li>
+    </ul>
+
+    <h3 class="reveal" style="margin-top:1.2rem;">Côté perso</h3>
+    <ul class="chips reveal delay-1">
+      <li>Musculation</li>
+      <li>Boxe</li>
+      <li>Automobile</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Section contact -->
+<section id="contact" class="section">
+  <div class="container two-col">
+    
+    <!-- Infos de contact -->
+    <div class="reveal">
+      <h2>Contact</h2>
+      <p>Une opportunité, une question, ou envie d’échanger ?</p>
+      <ul class="list">
+        <li>📞 <a href="tel:+32 471 71 05 74">+32 471 71 05 74</a></li>
+        <li>📧 <a href="mailto:tristan.valcke1@gmail.com">tristan.valcke1@gmail.com</a></li>
+        <li>🖥️ <a href="https://github.com/tvalcke" target="_blank" rel="noopener">github.com/tvalcke</a></li>
+      </ul>
+    </div>
+
+    <!-- Formulaire avec Formspree -->
+    <aside class="card reveal delay-1">
+      <h3>Formulaire de contact</h3>
+      <form id="contact-form" class="form" action="https://formspree.io/f/mrbagzje" method="POST">
+        
+        <label>Nom
+          <input type="text" name="name" required placeholder="Votre nom" />
+        </label>
+
+        <label>Email
+          <input type="email" name="email" required placeholder="vous@exemple.com" />
+        </label>
+
+        <label>Message
+          <textarea name="message" rows="5" required placeholder="Votre message"></textarea>
+        </label>
+
+        <button class="btn" type="submit">Envoyer</button>
+        <p id="form-status" class="muted" role="status" aria-live="polite"></p>
+      </form>
+    </aside>
+
+  </div>
+</section>
+
+
+<!-- Footer-->
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Tristan Valcke - Portfolio</p>
+
+    <div class="footer-buttons">
+      <a href="https://github.com/tvalcke" target="_blank" class="btn small" aria-label="Voir GitHub">
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bouton  remonter -->
+<a href="#hero" id="back-to-top" class="top" aria-label="Remonter en haut">↑</a>
+
+<!-- js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

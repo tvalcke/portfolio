@@ -1,0 +1,29 @@
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 5.2rem;
+  }
+
+  .container.two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    position: fixed;
+    inset: 56px 0 auto 0;
+    background: rgba(10, 14, 26, 0.98);
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-nav.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}

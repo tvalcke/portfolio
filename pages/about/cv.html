@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Tristan Valcke</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+
+<style>
+  @media print {
+    /*cacher ce qui ne sert à rien ( boutons, navigation...) */
+    .site-header,
+    .site-footer,
+    .btn {
+      display: none !important;
+    }
+
+    /* Corps du CV : fond blanc et texte noir pour impression */
+    body {
+      background: #fff;
+      color: #000;
+    }
+
+    /*supprimer ombres et bordures */
+    .cv {
+      box-shadow: none;
+      border: 0 !important;
+      background: #fff !important;
+    }
+
+    /* Liens */
+    a {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="../../index.html">Portfolio</a></h1>
+      <nav id="primary-nav" class="site-nav">
+        <a href="../../index.html#apropos">À propos</a>
+        <a href="../../index.html#projets">Projets</a>
+        <a href="../../index.html#formation">Formation</a>
+        <a href="../../index.html#competences">Compétences</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="../heures/heures.html">Heures</a>
+        <a class="btn" href="../../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<main class="section">
+  <div class="container narrow">
+    <div class="cv card">
+      <header style="margin-bottom: .5rem;">
+        <h1 style="margin:.2rem 0;">Tristan Valcke</h1>
+        <p class="muted">Étudiant en informatique — EPHEC LLN (IT, Bac 3) • Passion web & outils</p>
+
+        <p class="muted">📧 <a href="mailto:tristan.valcke1@gmail.com">tristan.valcke1@gmail.com</a>
+         • 🖥️ <a href="https://github.com/tvalcke" target="_blank" rel="noopener">github.com/tvalcke</a>
+         • 📞 <a href="tel:+32 471 71 05 74">+32 471 71 05 74</a></p>
+
+      </header>
+
+      <section>
+        <h2>Profil</h2>
+        <p>Étudiant sérieux mais fun, patient et soucieux du détail. J’aime apprendre vite,
+           construire des interfaces simples et maintenables, et rester orienté client.
+        </p>
+      </section>
+
+      <section>
+        <h2>Compétences techniques</h2>
+        <ul class="chips">
+          <li>HTML</li>
+          <li>CSS (responsive)</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>C (bases)</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Git/GitHub</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Formation</h2>
+        <ul class="list">
+          <li><strong>EPHEC LLN — IT (Bac 3)</strong> — Développement, systèmes, gestion de projet. Préférences : dev web, électricité & électronique.</li>
+          <li><strong>Diplôme secondaire (CESS)</strong> — Collège Sainte-Gertrude, Nivelles - Option ETT ( étude technique et technologiques ) et Histoire</li>
+        </ul>
+      </section>
+
+
+      <!-- <section>
+        <h2>Projets</h2>
+        <ul class="list">
+          <li><strong>TFE (en cours) — Logiciel de facturation</strong> pour David Limousine — Python, PySide6, SQLite, génération PDF & envoi email (desktop MacOS).</li>
+          <li>Projet X — Interface web modulaire (HTML/CSS/JS).</li>
+          <li>Projet Y — Site vitrine responsive accessible.</li>
+        </ul>
+      </section> -->
+
+
+      <section>
+        <h2>Expériences (compétences transversales)</h2>
+        <ul class="list">
+          <li><strong>Indépendant — Transport de personnes (LVC)</strong> — Relation client, organisation, fiabilité.</li>
+          <li><strong>Colruyt (2 ans)</strong> — Rigueur, esprit d’équipe, gestion du temps.</li>
+          <li><strong>Intermarché (1 an)</strong> — Service client, polyvalence.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Soft skills</h2>
+        <ul class="chips">
+          <li>Patient</li>
+          <li>Soucieux du détail</li>
+          <li>Aime apprendre</li>
+          <li>Orienté client</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Centres d’intérêt</h2>
+        <ul class="chips">
+          <li>Musculation</li>
+          <li>Boxe</li>
+          <li>Automobile</li>
+        </ul>
+      </section>
+
+      <footer style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+        <a class="btn" href="#" onclick="window.print(); return false;">Télécharger en PDF</a>
+        <a class="btn ghost" href="../../index.html">Retour au portfolio</a>
+      </footer>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Tristan Valcke - CV</p>
+  </div>
+</footer>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

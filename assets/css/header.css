@@ -1,0 +1,50 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(14, 20, 36, 0.7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+.brand .accent {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.site-nav a {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav-toggle .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}

@@ -1,0 +1,12 @@
+/* var globales couleurs et trucs réutilisables*/
+:root {
+  --bg: #0b0f1a;         /* fond principal */
+  --bg-alt: #0e1424;     /* fond alternatif */
+  --card: #121826;       /* cartes */
+  --text: #e6e8ee;       /* texte principal */
+  --muted: #9aa3b2;     /* texte discret */
+  --accent: #ff3b5c;     /* rouge principal - peut etre mettre plus foncé ? */
+  --accent-2: #ff6b81;   /* rouge plus clair */
+  --border: #1f2636;
+  --shadow: 0 10px 30px rgba(0,0,0,0.25);
+}

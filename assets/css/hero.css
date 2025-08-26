@@ -1,0 +1,44 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.hero-inner h1 {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  margin: 0.2rem 0;
+}
+
+.tagline {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.hero-visual {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.hero-visual img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
