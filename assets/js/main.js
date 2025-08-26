@@ -83,6 +83,25 @@ form?.addEventListener('submit', () => {
 });
 
 
+
+// Menu burger pour tel
+const navToggle = $('.nav-toggle');
+const primaryNav = $('#primary-nav');
+if (navToggle && primaryNav) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !expanded);
+  primaryNav.classList.toggle('show');
+  });
+
+  $$('#primary-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.setAttribute('aria-expanded', false);
+  primaryNav.classList.remove('show');
+    });
+  });
+}
+
 //année courante
 const year = $('#year');
 if (year) year.textContent = new Date().getFullYear();
