@@ -58,31 +58,6 @@
 - Possibilité d'optimiser le chargement CSS selon les besoins
 - Structure prête pour l'optimisation en production
 
-## Utilisation
-
-### Pour ajouter une nouvelle page :
-1. Créer le fichier HTML dans le dossier approprié (`pages/about/`, `pages/projects/`, `pages/heures/`)
-2. Importer les CSS avec le bon chemin relatif
-3. Ajouter les styles spécifiques si nécessaire
-
-### Pour ajouter une nouvelle preuve :
-1. Copier le template `pages/heures/preuves/preuve-template.html`
-2. Remplacer tous les placeholders `[NOM]` par les vraies informations
-3. Ajouter les images dans `assets/images/heures/[dossier]/`
-4. Mettre à jour le lien dans `pages/heures/heures.html`
-
-### Pour modifier les styles :
-- **Variables** → `assets/css/variables.css`
-- **Styles généraux** → `assets/css/base.css`
-- **Header/Navigation** → `assets/css/header.css`
-- **Boutons** → `assets/css/buttons.css`
-- **Cartes de projets** → `assets/css/cards.css`
-- **Page spécifique** → créer un nouveau fichier CSS
-
-### Pour ajouter des images :
-- Placer les images dans `assets/images/`
-- Référencer avec le chemin relatif approprié
-
 ## Technologies utilisées
 
 - **HTML5** - Structure sémantique
