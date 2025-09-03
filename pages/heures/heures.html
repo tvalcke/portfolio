@@ -36,15 +36,22 @@
         <div class="heures-grid">
 
           <article class="heures-card reveal">
-            <h3>Formation en ligne Oracle sur l'IA</h3>
-            <p><strong>Heures réelles :</strong> En cours</p>
-            <p><strong>Heures comptabilisées :</strong> En cours</p>
-            <p>Oracle Cloud Infrastructure 2025 AI Foundations Associate (1Z0-1122-25)</p>
-            <p>Formation en ligne sur l'intelligence artificielle proposée par Oracle avec un examen final et une certification.</p>
+            <h3>Formations avec examen</h3>
+            <p><strong>Heures réelles :</strong> ++h</p>
+            <p><strong>Heures comptabilisées :</strong> 0h</p>
+            <p>Formations qui comportent un examen final pour obtenir une certification.</p>
             <a href="" class="btn small">Pas encore disponible</a>
           </article>
 
           <article class="heures-card reveal delay-1">
+            <h3>Formations sans examen</h3>
+            <p><strong>Heures réelles :</strong> ++h</p>
+            <p><strong>Heures comptabilisées :</strong> 5h</p>
+            <p>Formations qui n'incluent pas d'examen final</p>
+            <a href="preuves/preuve-formations-sans-examen.html" class="btn small">Voir preuve</a>
+          </article>
+
+          <article class="heures-card reveal delay-2">
             <h3>Proximus Basecamp</h3>
             <p><strong>Heures réelles :</strong> 4h</p>
             <p><strong>Heures comptabilisées :</strong> 4h</p>
@@ -52,7 +59,7 @@
             <a href="preuves/preuve-proximus-basecamp.html" class="btn small">Voir preuve</a>
           </article>
 
-          <article class="heures-card reveal delay-2">
+          <article class="heures-card reveal delay-3">
             <h3>Hackathon EPHEC 2024 - "Retour vers le futur"</h3>
             <p><strong>Heures réelles :</strong> 48h</p>
             <p><strong>Heures comptabilisées :</strong> 10h</p>
@@ -60,7 +67,7 @@
             <a href="preuves/preuve-hackathon-ephec-2024.html" class="btn small">Voir preuve</a>
           </article>
 
-          <article class="heures-card reveal delay-3">
+          <article class="heures-card reveal delay-4">
             <h3>Sites web</h3>
             <p><strong>Heures réelles:</strong> ++h</p>
             <p><strong>Heures comptabilisées :</strong> 10h</p>
@@ -68,7 +75,7 @@
             <a href="preuves/preuve-sites-web.html" class="btn small">Voir preuve</a>
           </article>
 
-          <article class="heures-card reveal delay-4">
+          <article class="heures-card reveal delay-5">
             <h3>Travail</h3>
             <p><strong>Heures réelles :</strong> ++h</p>
             <p><strong>Heures comptabilisées :</strong> 5h</p>
@@ -76,7 +83,7 @@
             <a href="preuves/preuve-travail.html" class="btn small">Voir preuve</a>
           </article>
 
-          <article class="heures-card reveal delay-5">
+          <article class="heures-card reveal delay-6">
             <h3>Sports</h3>
             <p><strong>Heures réelles :</strong> +-12h/ semaine</p>
             <p><strong>Heures comptabilisées :</strong> 5h</p>
@@ -84,6 +91,46 @@
             <a href="preuves/preuve-sports.html" class="btn small">Voir preuve</a>
           </article>
 
+        </div>
+
+        <div class="heures-summary reveal delay-7">
+          <h2 class="text-center">Résumé des heures</h2>
+          <div class="summary-container">
+            <table class="summary-table">
+              <thead>
+                <tr>
+                  <th>Activité</th>
+                  <th>Heures comptabilisées</th>
+                </tr>
+              </thead>
+              <tbody id="hours-table-body">
+                <tr>
+                  <td>Formations</td>
+                  <td data-hours="5">5h</td>
+                </tr>
+                <tr>
+                  <td>Conférences</td>
+                  <td data-hours="4">4h</td>
+                </tr>
+                <tr>
+                  <td>Hackathons</td>
+                  <td data-hours="10">10h</td>
+                </tr>
+                <tr>
+                  <td>Création de sites web divers</td>
+                  <td data-hours="10">10h</td>
+                </tr>
+                <tr>
+                  <td>Travail + Loisirs</td>
+                  <td data-hours="10">5h</td>
+                </tr>
+                <tr class="total-row">
+                  <td><strong>Total</strong></td>
+                  <td id="hours-total"><strong></strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
@@ -101,5 +148,6 @@
   </footer>
 
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/hours-calculator.js"></script>
 </body>
 </html>
