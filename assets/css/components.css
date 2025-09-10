@@ -66,3 +66,91 @@
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgb(255 59 92 / 0.25);
 }
+
+/* Styles pour les filtres de certificats */
+.filter-container {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.filter-button {
+  background: rgba(255, 59, 92, 0.1);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.filter-button:hover::before {
+  left: 100%;
+}
+
+.filter-button:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 59, 92, 0.3);
+}
+
+.filter-button.active {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(255, 59, 92, 0.4);
+}
+
+#certificates-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.certificate-container {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+/* Animation pour le tri */
+.certificate-container.sorting {
+  transform: scale(0.98) translateY(10px);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filter-button {
+    width: 90%;
+    max-width: 280px;
+    padding: 0.8rem 1rem;
+  }
+}
