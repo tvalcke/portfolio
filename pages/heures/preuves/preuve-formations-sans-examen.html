@@ -50,40 +50,50 @@
       <div class="container">
         <h2 class="reveal text-center">Certificats de formation</h2>
         
-        <div class="certificate-container reveal delay-1">
+        <!-- Filtres de tri -->
+        <div class="filter-container reveal delay-1">
+          <button class="filter-button active" data-filter="date-desc">Plus récent</button>
+          <button class="filter-button" data-filter="date-asc">Plus ancien</button>
+          <button class="filter-button" data-filter="duration">Par durée</button>
+        </div>
+        
+        <!-- Conteneur des certificats -->
+        <div id="certificates-container">
+        
+        <div class="certificate-container reveal delay-2" data-date="2025-09-10" data-platform="Cursa" data-duration="90">
           <div class="certificate-title">Git et GitHub</div>
           <div class="certificate-details">
-            <p>Plateforme: Cursa | Date: Septembre 2025</p>
+            <p>Plateforme: Cursa | Date: Septembre 2025 | 1h30</p>
           </div>
           <a href="../../../assets/images/heures/formations_sans_exam/git.png" target="_blank">
             <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/git.png" alt="Certificat Git et GitHub">
           </a>
         </div>
 
-        <div class="certificate-container reveal delay-2">
+        <div class="certificate-container reveal delay-3" data-date="2025-09-04" data-platform="MindLuster" data-duration="1320">
           <div class="certificate-title">Web Design - Conception et principes fondamentaux</div>
           <div class="certificate-details">
-            <p>Plateforme: MindLuster | Date: Aout à Septembre 2025</p>
+            <p>Plateforme: MindLuster | Date: Aout à Septembre 2025 | 22h</p>
           </div>
           <a href="../../../assets/images/heures/formations_sans_exam/Web_Design.jpg" target="_blank">
             <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/Web_Design.jpg" alt="Certificat Web Design">
           </a>
         </div>
         
-        <div class="certificate-container reveal delay-3">
+        <div class="certificate-container reveal delay-4" data-date="2025-09-03" data-platform="MindLuster" data-duration="40">
           <div class="certificate-title">HTML, CSS et JavaScript - Les bases du développement web</div>
           <div class="certificate-details">
-            <p>Plateforme: MindLuster | Date: Septembre 2025</p>
+            <p>Plateforme: MindLuster | Date: Septembre 2025 | 1h</p>
           </div>
           <a href="../../../assets/images/heures/formations_sans_exam/HTML_CSS_JS.jpg" target="_blank">
             <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/HTML_CSS_JS.jpg" alt="Certificat HTML, CSS et JavaScript">
           </a>
         </div>
         
-        <div class="certificate-container reveal delay-4">
+        <div class="certificate-container reveal delay-5" data-date="2025-09-03" data-platform="MindLuster" data-duration="60">
           <div class="certificate-title">Web Development Basics</div>
           <div class="certificate-details">
-            <p>Plateforme: MindLuster | Date: Septembre 2025</p>
+            <p>Plateforme: MindLuster | Date: Septembre 2025 | 1h</p>
           </div>
           <a href="../../../assets/images/heures/formations_sans_exam/Web_Devellop_basics.jpg" target="_blank">
             <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/Web_Devellop_basics.jpg" alt="Certificat Web Development Basics">
@@ -117,5 +127,70 @@
   <a href="#hero" id="back-to-top" class="top" aria-label="Remonter en haut">↑</a>
 
   <script src="../../../assets/js/main.js"></script>
+  <script>
+    // Script de filtrage des certificats
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-button');
+      const certificates = document.querySelectorAll('.certificate-container');
+      const container = document.getElementById('certificates-container');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+          
+          // Animation de tri en cours
+          certificates.forEach(cert => cert.classList.add('sorting'));
+          
+          // Mettre à jour les boutons actifs
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          setTimeout(() => {
+            // Créer un tableau des certificats avec leurs nouvelles positions
+            let sortedCerts = Array.from(certificates);
+
+            if (filter === 'date-desc') {
+              // Trier par date (plus récent en premier)
+              sortedCerts.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return dateB - dateA;
+              });
+            } else if (filter === 'date-asc') {
+              // Trier par date (plus ancien en premier)
+              sortedCerts.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return dateA - dateB;
+              });
+            } else if (filter === 'duration') {
+              // Trier par durée (plus long en premier)
+              sortedCerts.sort((a, b) => {
+                const durationA = parseInt(a.getAttribute('data-duration'));
+                const durationB = parseInt(b.getAttribute('data-duration'));
+                return durationB - durationA;
+              });
+            }
+
+            // Réorganiser les éléments dans le DOM
+            sortedCerts.forEach(cert => {
+              container.appendChild(cert);
+            });
+
+            // Retirer l'animation de tri
+            setTimeout(() => {
+              certificates.forEach(cert => cert.classList.remove('sorting'));
+            }, 100);
+          }, 200);
+        });
+      });
+
+      // Activer le tri par date par défaut au chargement
+      const defaultButton = document.querySelector('.filter-button[data-filter="date-desc"]');
+      if (defaultButton && !defaultButton.classList.contains('active')) {
+        defaultButton.click();
+      }
+    });
+  </script>
 </body>
 </html>
