@@ -42,7 +42,7 @@ function changeSlide(direction) {
   if (currentSlideIndex >= slides.length) {
     currentSlideIndex = 0;
   } else if (currentSlideIndex < 0) {
-    currentSlideIndex = slides.length - 1;
+   currentSlideIndex = slides.length - 1;
   }
   
   showSlide(currentSlideIndex);
