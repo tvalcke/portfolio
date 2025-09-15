@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.tvalcke.be/sitemap.xml
+
+# Disallow specific files if needed
+# Disallow: /assets/css/
+# Disallow: /assets/js/
