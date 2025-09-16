@@ -1,13 +1,13 @@
-// Raccourcis pour pas répéter document.querySelector tout le temps
+// shortcut pr pas répété document.querySelector tt le tps
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-// Check si l'user préfère pas trop d'animations
+// check si user préfère moins d'anim
 function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
-//scroll fluide
+// scroll fluide pr les liens ancres
 document.addEventListener('click', (e) => {
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
@@ -23,24 +23,24 @@ document.addEventListener('click', (e) => {
       block: 'start'
     });
   } catch (err) {
-    console.error(err);
+    console.error('erreur scroll:', err);
   }
 });
 
-//apparition des éléments au scroll
+// apparition éléments au scroll (reveal effect)
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in-view');
-      io.unobserve(entry.target); // plus besoin d'observer après
+      io.unobserve(entry.target); // stop observer après
     }
   });
 }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
 
-// Observer tous les éléments avec la classe reveal
+// observe ts les éléments .reveal
 $$('.reveal').forEach(el => io.observe(el));
 
-// léger parrallax du héro
+// parallax léger du hero bg
 const parallax = $('.parallax img');
 let ticking = false;
 
@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
 
   if (!ticking) {
     window.requestAnimationFrame(() => {
-      const y = window.scrollY * 0.06;
+      const y = window.scrollY * 0.06; // vitesse parallax
       parallax.style.transform = `translateY(${y}px)`;
       ticking = false;
     });
@@ -57,7 +57,7 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-// btn pour remonter
+// btn remonter en haut
 const backToTop = $('#back-to-top');
 
 const toggleTop = () => {
@@ -71,9 +71,9 @@ backToTop?.addEventListener('click', (e) => {
 });
 
 window.addEventListener('scroll', toggleTop, { passive: true });
-toggleTop();
+toggleTop(); // init
 
-// form de contact (Formspree)
+// form contact avec formspree
 const form = $('#contact-form');
 form?.addEventListener('submit', () => {
   const status = $('#form-status');
@@ -82,26 +82,25 @@ form?.addEventListener('submit', () => {
   }
 });
 
-
-
-// Menu burger pour tel
+// menu burger pr mobile
 const navToggle = $('.nav-toggle');
 const primaryNav = $('#primary-nav');
 if (navToggle && primaryNav) {
   navToggle.addEventListener('click', () => {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
     navToggle.setAttribute('aria-expanded', !expanded);
-  primaryNav.classList.toggle('show');
+    primaryNav.classList.toggle('show');
   });
 
+  // fermer menu qd on click sur link
   $$('#primary-nav a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.setAttribute('aria-expanded', false);
-  primaryNav.classList.remove('show');
+      primaryNav.classList.remove('show');
     });
   });
 }
 
-//année courante
+// année actuelle ds footer
 const year = $('#year');
 if (year) year.textContent = new Date().getFullYear();
