@@ -1,3 +1,4 @@
+// calcul auto des heures qd page chargée
 document.addEventListener('DOMContentLoaded', function() {
   calculateTotalHours();
 });
@@ -15,7 +16,7 @@ function calculateTotalHours() {
     }
   });
 
-  // Mettre à jour le total 
+  // maj du total affiché
   const totalElement = document.getElementById('hours-total');
   if (totalElement) {
     totalElement.innerHTML = `<strong>${totalHours}h</strong>`;
@@ -25,9 +26,9 @@ function calculateTotalHours() {
 }
 
 /**
- * Pluqs tard plus tard
- * @param {string} activityName - Nom de l'activité
- * @param {number} hours - Nombre d'heures
+ * pr plus tard si besoin update activité
+ * @param {string} activityName - nom activité
+ * @param {number} hours - nb heures
  */
 function updateActivityHours(activityName, hours) {
   const rows = document.querySelectorAll('#hours-table-body tr');
@@ -44,7 +45,7 @@ function updateActivityHours(activityName, hours) {
     }
   });
 
-  
+  // recalc total si qqch changé
   if (updated) {
     calculateTotalHours();
   }

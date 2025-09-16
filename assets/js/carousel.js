@@ -3,21 +3,21 @@ let slides = [];
 let indicators = [];
 let autoScrollInterval = null;
 
-// Initialisation du carousel
+// init carousel au chargement
 function initCarousel() {
   slides = document.querySelectorAll('.carousel-slide');
   indicators = document.querySelectorAll('.carousel-indicator');
   
-  // Pas de carousel si pas de slides
+  // rien à faire si pas de slides
   if (slides.length === 0) return;
   
-  // Démarrer l'auto-scroll si on a des slides
+  // démarrer auto-scroll si on a du contenu
   startAutoScroll();
 }
 
-// Afficher une slide spécifique
+// afficher slide spécifique
 function showSlide(index) {
-  // Masquer toutes les slides
+  // cacher ttes les slides
   slides.forEach((slide, i) => {
     slide.classList.remove('active');
     if (indicators[i]) {
@@ -25,7 +25,7 @@ function showSlide(index) {
     }
   });
   
-  // Afficher la slide courante
+  // montrer la slide actuelle
   if (slides[index]) {
     slides[index].classList.add('active');
   }
@@ -34,11 +34,11 @@ function showSlide(index) {
   }
 }
 
-// Changer de slide (direction: -1 pour précédent, 1 pour suivant)
+// changer slide (direction: -1 pr précédent, 1 pr suivant)
 function changeSlide(direction) {
   currentSlideIndex += direction;
   
-  // Boucle infinie
+  // boucle infinie pr navigation
   if (currentSlideIndex >= slides.length) {
     currentSlideIndex = 0;
   } else if (currentSlideIndex < 0) {
@@ -47,29 +47,29 @@ function changeSlide(direction) {
   
   showSlide(currentSlideIndex);
   
-  // Redémarrer l'auto-scroll
+  // redémarrer auto-scroll
   resetAutoScroll();
 }
 
-// Aller à une slide précise (pour les indicateurs)
+// aller à slide précise (pr les indicateurs)
 function currentSlide(index) {
-  currentSlideIndex = index - 1; // Les indicateurs commencent à 1
+  currentSlideIndex = index - 1; // indicateurs commencent à 1
   showSlide(currentSlideIndex);
   
-  // Redémarrer l'auto-scroll
+  // redémarrer auto-scroll
   resetAutoScroll();
 }
 
-// Auto-scroll du carousel
+// auto-scroll du carousel
 function startAutoScroll() {
-  if (autoScrollInterval) return; // Déjà démarré
+  if (autoScrollInterval) return; // déjà démarré
   
   autoScrollInterval = setInterval(() => {
     changeSlideAuto(1);
-  }, 8000); // Change toutes les 8 secondes
+  }, 8000); // change ttes les 8 sec
 }
 
-// Changer de slide automatiquement (sans reset de l'auto-scroll)
+// changer slide auto (sans reset auto-scroll)
 function changeSlideAuto(direction) {
   currentSlideIndex += direction;
   
@@ -82,7 +82,7 @@ function changeSlideAuto(direction) {
   showSlide(currentSlideIndex);
 }
 
-// Redémarrer l'auto-scroll (quand l'user interagit)
+// redémarrer auto-scroll (qd user interagit)
 function resetAutoScroll() {
   if (autoScrollInterval) {
     clearInterval(autoScrollInterval);
@@ -91,10 +91,10 @@ function resetAutoScroll() {
   startAutoScroll();
 }
 
-// Navigation au clavier
+// navigation clavier
 function setupKeyboardNavigation() {
   document.addEventListener('keydown', (e) => {
-    // Seulement si on a un carousel sur la page
+    // check si on a carousel sur la page
     if (slides.length === 0) return;
     
     if (e.key === 'ArrowLeft') {
@@ -105,13 +105,13 @@ function setupKeyboardNavigation() {
   });
 }
 
-// Initialisation quand le DOM est prêt
+// init qd dom prêt
 document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   setupKeyboardNavigation();
 });
 
-// Au cas où le script est chargé après le DOMContentLoaded
+// au cas où script chargé après DOMContentLoaded
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
