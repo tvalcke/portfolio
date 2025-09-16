@@ -1,0 +1,125 @@
+/* Styles pour la page CV */
+
+/* Styles d'impression */
+@media print {
+  /*cacher ce qui ne sert à rien ( boutons, navigation...) */
+  .site-header,
+  .site-footer,
+  .btn,
+  .cv-actions,
+  button,
+  .btn-header,
+  nav {
+    display: none !important;
+  }
+
+  /* Corps du CV : fond blanc et texte noir pour impression */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Page complète en blanc */
+  html {
+    background: #fff !important;
+  }
+
+  /*supprimer ombres et bordures */
+  .cv {
+    box-shadow: none !important;
+    border: 0 !important;
+    border: none !important;
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 1.5rem !important;
+    border-radius: 0 !important;
+  }
+  
+  /* Container en blanc aussi */
+  .container {
+    background: #fff !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Card en blanc */
+  .card {
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Liens en noir pour impression */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  
+  /* Texte muted en gris foncé pour lisibilité */
+  .muted {
+    color: #333 !important;
+  }
+  
+  /* Sections bien espacées */
+  section {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Titres */
+  h1, h2, h3 {
+    color: #000 !important;
+  }
+  
+  /* Puces de liste */
+  ul li {
+    color: #000 !important;
+  }
+  
+  /* Chips/badges */
+  .chips li {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* Styles pour les boutons d'export */
+.cv-actions {
+  margin-bottom: 2rem;
+}
+
+.cv-actions .btn {
+  margin: 0 0.5rem;
+}
+
+/* Styles spécifiques pour l'export PDF */
+.pdf-export #cv-content {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.pdf-export .cv,
+.pdf-export .card {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+}
+
+.pdf-export .cv-actions,
+.pdf-export .btn,
+.pdf-export button,
+.pdf-export .site-header,
+.pdf-export .site-footer,
+.pdf-export nav,
+.pdf-export footer {
+  display: none !important;
+  visibility: hidden !important;
+}

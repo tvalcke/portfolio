@@ -6,37 +6,11 @@
   <title>CV - Tristan Valcke</title>
 
   <link rel="stylesheet" href="../../assets/css/main.css" />
+  <link rel="stylesheet" href="../../assets/css/cv.css" />
   <link rel="icon" type="image/x-icon" href="../../assets/images/favicon_io/favicon.ico">
-
-<style>
-  @media print {
-    /*cacher ce qui ne sert à rien ( boutons, navigation...) */
-    .site-header,
-    .site-footer,
-    .btn {
-      display: none !important;
-    }
-
-    /* Corps du CV : fond blanc et texte noir pour impression */
-    body {
-      background: #fff;
-      color: #000;
-    }
-
-    /*supprimer ombres et bordures */
-    .cv {
-      box-shadow: none;
-      border: 0 !important;
-      background: #fff !important;
-    }
-
-    /* Liens */
-    a {
-      color: #000 !important;
-      text-decoration: none !important;
-    }
-  }
-</style>
+  
+  <!-- html2pdf.js pour export PDF avancé (optionnel) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 </head>
 <body>
@@ -58,7 +32,17 @@
 
 <main class="section">
   <div class="container narrow">
-    <div class="cv card">
+    <!-- Boutons d'export PDF -->
+    <div class="cv-actions" style="text-align: center; margin-bottom: 2rem;">
+      <button id="export-pdf" class="btn">
+        📄 Télécharger en PDF
+      </button>
+      <button id="print-cv" class="btn ghost" onclick="window.print()">
+        🖨️ Imprimer
+      </button>
+    </div>
+    
+    <div class="cv card" id="cv-content">
       <header style="margin-bottom: .5rem;">
         <h1 style="margin:.2rem 0;">Tristan Valcke</h1>
         <p class="muted">Étudiant en informatique - EPHEC LLN (IT, Bac 3) • Passion web & outils</p>
@@ -139,8 +123,7 @@
       </section>
 
       <footer style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
-        <a class="btn" href="#" onclick="window.print(); return false;">Imprimer le CV</a>
-        <a class="btn ghost" href="../../index.html">Retour au portfolio</a>
+        <a class="btn" href="../../index.html">Retour au portfolio</a>
       </footer>
     </div>
   </div>
@@ -151,6 +134,12 @@
     <p>© <span id="year"></span> Tristan Valcke - CV</p>
   </div>
 </footer>
+
+<!-- Bouton pour remonter en haut -->
+<a href="#" id="back-to-top" class="top" aria-label="Remonter en haut">↑</a>
+
 <script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/cv-export.js"></script>
+
 </body>
 </html>
