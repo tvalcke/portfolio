@@ -99,6 +99,18 @@
             <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/Web_Devellop_basics.jpg" alt="Certificat Web Development Basics">
           </a>
         </div>
+
+        <div class="certificate-container reveal delay-6" data-date="2025-09-20" data-platform="CodeCademy" data-duration="1020">
+          <div class="certificate-title">PHP fundamentals</div>
+          <div class="certificate-details">
+            <p>Plateforme: CodeCademy | Date: Septembre 2025 | 17h</p>
+          </div>
+          <a href="../../../assets/images/heures/formations_sans_exam/phpCodecademy.png" target="_blank">
+            <img class="certificate-image" src="../../../assets/images/heures/formations_sans_exam/phpCodecademy.png" alt="Certificat PHP fundamentals">
+          </a>
+        </div>
+
+        </div>
       </div>
     </section>
 
@@ -128,5 +140,17 @@
 
   <script src="../../../assets/js/main.js"></script>
   <script src="../../../assets/js/certificate-filter.js"></script>
+  <script>
+    // Trier automatiquement par le plus récent au chargement de la page
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      setTimeout(function() {
+        const filterButton = document.querySelector('[data-filter="date-desc"]');
+        if (filterButton) {
+          filterButton.click();
+        }
+      }, 100);
+    });
+  </script>
 </body>
 </html>
