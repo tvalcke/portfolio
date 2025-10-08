@@ -26,4 +26,24 @@
   .nav-toggle {
     display: block;
   }
+
+  /* Ajustement du bouton remonter en haut pour éviter la superposition avec le footer sur tel */
+  #back-to-top {
+    bottom: 5rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Ajustement pour tel */
+  .site-footer .container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-buttons {
+    margin-top: 0.5rem;
+  }
 }
