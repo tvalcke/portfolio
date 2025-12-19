@@ -36,9 +36,15 @@
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  max-width: 350px;
+  width: 100%;
+  justify-self: start;
+  align-self: center;
 }
 
 .hero-visual img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  width: 100%;
+  height: auto;
 }
